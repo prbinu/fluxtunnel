@@ -9,7 +9,9 @@ A reverse direction TLS proxy
 ```
 
 **Purpose:**
-To expose services inside private networks
+To expose services inside private networks (behind firewalls)
+
+Example use cases: share your local desktop, terminal or web applications over Internet to customer, partner or coworker
 
 ## Usage
 
@@ -45,7 +47,7 @@ docker run -p 6080:80 centminmod/docker-ubuntu-vnc-desktop
 To access VNC in browser, visit:
 http://127.0.0.1:6123
 
-To expose a local terminal, try with (gotty)[https://github.com/yudai/gotty]:
+To expose a local terminal, try `fluxtunnel` with [gotty](https://github.com/yudai/gotty):
 
 ```bash
 gotty -p 6080 -w bash
